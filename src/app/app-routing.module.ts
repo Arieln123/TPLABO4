@@ -8,16 +8,11 @@ import { ErrorComponent} from './shared/error/error.component';
 const routes: Routes = [
   {
     path:'landing',
-    component: LandingComponent,
-    loadChildren: ()=> import("./components/landing/landing.component").then(m => m.LandingComponent)
+    component: LandingComponent
   },
   {
     path:'login',
     component: LoginComponent
-  },
-  {
-    path:'register',
-    component: RegisterComponent
   },
   {
     path: '',
