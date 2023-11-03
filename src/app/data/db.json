@@ -1,0 +1,116 @@
+{
+    "vehiculos": [
+      {
+        "idUsuario": 1,
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "patente": "ABC123",
+        "color": "Blanco"
+      },
+      {
+        "idUsuario": 2,
+        "marca": "Honda",
+        "modelo": "Civic",
+        "patente": "XYZ456",
+        "color": "Gris"
+      },
+      {
+        "idUsuario": 3,
+        "marca": "Ford",
+        "modelo": "Mustang",
+        "patente": "DEF789",
+        "color": "Rojo"
+      },
+      {
+        "idUsuario": 4,
+        "marca": "Volkswagen",
+        "modelo": "Golf",
+        "patente": "GHI234",
+        "color": "Azul"
+      },
+      {
+        "idUsuario": 5,
+        "marca": "Chevrolet",
+        "modelo": "Cruze",
+        "patente": "JKL567",
+        "color": "Negro"
+      },
+      {
+        "idUsuario": 1,
+        "marca": "Nissan",
+        "modelo": "Altima",
+        "patente": "MNO890",
+        "color": "Plata"
+      },
+      {
+        "idUsuario": 2,
+        "marca": "Subaru",
+        "modelo": "Impreza",
+        "patente": "PQR123",
+        "color": "Verde"
+      },
+      {
+        "idUsuario": 3,
+        "marca": "Audi",
+        "modelo": "A4",
+        "patente": "STU456",
+        "color": "Gris Oscuro"
+      },
+      {
+        "idUsuario": 4,
+        "marca": "Mazda",
+        "modelo": "CX-5",
+        "patente": "VWX789",
+        "color": "Azul Metálico"
+      },
+      {
+        "idUsuario": 5,
+        "marca": "Kia",
+        "modelo": "Sorento",
+        "patente": "YZA012",
+        "color": "Blanco Perla"
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "email": "juan.perez@example.com",
+        "contraseña": "secreta123",
+        "admin" : false
+      },
+      {
+        "id": 2,
+        "nombre": "María",
+        "apellido": "González",
+        "email": "maria.gonzalez@example.com",
+        "contraseña": "clave456",
+        "admin" : false
+      },
+      {
+        "id": 3,
+        "nombre": "Carlos",
+        "apellido": "López",
+        "email": "carlos.lopez@example.com",
+        "contraseña": "123456",
+        "admin" : false
+      },
+      {
+        "id": 4,
+        "nombre": "Ana",
+        "apellido": "Martínez",
+        "email": "ana.martinez@example.com",
+        "contraseña": "abcdef",
+        "admin" : true
+      },
+      {
+        "id": 5,
+        "nombre": "Luis",
+        "apellido": "Rodríguez",
+        "email": "luis.rodriguez@example.com",
+        "contraseña": "password",
+        "admin" : true
+      }
+    ]
+  }
