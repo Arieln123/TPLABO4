@@ -8,15 +8,17 @@ import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
+    NavBarComponent,
     FooterComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     CommonModule
   ],
   exports:[
+    NavBarComponent,
     FooterComponent,
-    ErrorComponent
+    ErrorComponent,
     
   ]
 })

@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    max-width: 1146px;
+    padding: 20px 20px 40px;
+    margin: 0 auto;
+}
+
+footer {
+    position: relative;
+    background-color: #242424;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    
+    .inner {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    color: #ccc;
+    }
+    
+    .meta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    
+    ul {
+        list-style-type: none;
+        color: #fff;
+      }
+      
+      .links {
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 20px;
+        width: 70%;
+      }
+      
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        font-family: 'FontAwesome';
+        width: 20%;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 645px) {
+    footer {
+      
+      .copyright {
+        align-items: flex-end;
+      }
+      
+      .meta {
+        flex-direction: column;
+        align-items: flex-end;
+        
+        .links {
+          order: 2;
+          width: 80%;
+          justify-content: space-between;
+          margin: 10px 0 0 0;
+        }
+        
+        .icons {
+          order: 1;
+          width: 100%;
+          justify-content: flex-end;
+          
+          li:not(:last-child) {
+            margin: 0 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    footer {
+      
+      .inner {
+        flex-direction: column;
+      }
+      
+      .copyright {
+        position: relative;
+        padding: 0 0 20px 0;
+        width: 100%;
+        align-items: flex-start;
+        
+        &:after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(80,80,80,1);
+        }
+      }
+      
+      .meta {
+        margin: 15px 0 0 0;
+        width: 100%;
+        flex-direction: row;
+        
+        .links {
+          margin: 0;
+          order: 1;
+          align-items: flex-start;
+          flex-direction: column;
+          
+          li:not(:last-child) {
+            margin: 0 0 15px 0;
+          }
+        }
+        
+        .icons {
+          order: 2;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          
+          li:not(:last-child) {
+            margin: 0 0 15px 0;
+          }
+        }
+      }
+    }
+  }
