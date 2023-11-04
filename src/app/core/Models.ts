@@ -1,4 +1,4 @@
-import { IProductos,IUser } from "./Interface";
+import { IVehiculos,IUser } from "./Interface";
 
 
 export class User implements IUser{
@@ -13,13 +13,13 @@ export class User implements IUser{
     }
 }
 
-export class Productos implements IProductos{
+export class Vehiculos implements IVehiculos{
     id: number | null;
     description: string| null;
     price: number | null;
     stock: number | null;
 
-    constructor(productos ?: any){
+    constructor(v ?: any){
         this.id = productos == undefined ? null : productos.id;
         this.description =  productos == undefined ? '' : productos.description;
         this.price =  productos == undefined ? '' : productos.price;
