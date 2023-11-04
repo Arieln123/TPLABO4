@@ -4,6 +4,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ErrorComponent} from './shared/error/error.component';
+import { HomeComponent } from './components/home/home/home.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
     path:'login',
     component: LoginComponent
   },
+  {
+    path:'home',
+    component: HomeComponent
+  },
+  
   {
     path: '',
     redirectTo:'landing',

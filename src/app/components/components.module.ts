@@ -8,6 +8,10 @@ import { RegisterComponent } from './register/register.component';
 import { SharedModule } from "../shared/shared.module";
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home/home.component';
+import { AddVehiculoComponent } from './home/add-vehiculo/add-vehiculo.component';
+import { EditVehiculoComponent } from './home/edit-vehiculo/edit-vehiculo.component';
+import { ViewVehiculoComponent } from './home/view-vehiculo/view-vehiculo.component';
 
 
 @NgModule({
@@ -15,6 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
         LandingComponent,
         LoginComponent,
         RegisterComponent,
+        HomeComponent,
+        AddVehiculoComponent,
+        EditVehiculoComponent,
+        ViewVehiculoComponent,
     ],
     exports: [],
     imports: [
