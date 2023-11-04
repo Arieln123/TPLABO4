@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Vehiculo } from 'src/app/core/Models';
 
 @Component({
   selector: 'app-view-vehiculo',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ViewVehiculoComponent {
 
+  @Input() inputVehiculos: Array<Vehiculo> = []
+ 
+
+
+
 }
+
