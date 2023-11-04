@@ -3,6 +3,9 @@
 .card-altura{
   max-height: 300px;
 }
+.card-group{
+  padding-top: 2rem;
+}
 
 /* Override UGG site */
 #main {width: 100%; padding:0;}

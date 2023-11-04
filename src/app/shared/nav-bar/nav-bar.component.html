@@ -1,19 +1,22 @@
 <header class="header">
-    <nav class="navbar">
-      <a class="logo" href="#">Logo</a>
+    <nav class="navbar navbar-fixed-top">
+      <a class="logo" href="#">"            "</a>
       <input type="checkbox" id="nav" class="hidden">
       <label for="nav" class="nav-toggle">
           <span></span>
           <span></span>
           <span></span>
        </label>
+
+
       <div class="wrapper">
         <ul class="menu">
-          <button  class="menu-item" (click)="goToLogin()" > Iniciar Sesión</button>
-          <li class="menu-item"><a href="#">Menu Item</a></li>
-          <li class="menu-item"><a href="#">Menu Item</a></li>
-          <li class="menu-item"><a href="#">Menu Item</a></li>
-          <li class="menu-item"><a href="#">Menu Item</a></li>
+         
+          
+          <li class="menu-item"><button type="button" class="btn btn-outline-dark" (click)="goToLogin()">Iniciar Sesion</button></li>
+          <li class="menu-item"><button type="button" class="btn btn-outline-dark" (click)="goToLogin()">Nuestros servicios</button></li>
+          <li class="menu-item"><button type="button" class="btn btn-outline-dark" (click)="goToLogin()">Tarifas</button></li>
+          <li class="menu-item "><button type="button" class="btn btn-outline-dark" (click)="goToLogin()">Contacto</button></li>
         </ul>
       </div>
     </nav>
