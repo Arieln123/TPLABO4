@@ -6,6 +6,8 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from "../shared/shared.module";
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,6 +21,9 @@ import { SharedModule } from "../shared/shared.module";
         CommonModule,
         ComponentsRoutingModule,
         SharedModule,
+        FormsModule,
+        HttpClientModule
+
     ]
 })
 export class ComponentsModule { }

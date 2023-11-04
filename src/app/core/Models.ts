@@ -1,4 +1,4 @@
-import { IProductos,IUser } from "./Interface";
+import { IVehiculos,IUser } from "./Interface";
 
 
 export class User implements IUser{
@@ -13,16 +13,22 @@ export class User implements IUser{
     }
 }
 
-export class Productos implements IProductos{
-    id: number | null;
-    description: string| null;
-    price: number | null;
-    stock: number | null;
+export class Vehiculo implements IVehiculos{
+    id: number | null=null;
+    marca: string ="";
+    modelo: string ="";
+    patente: string ="";
+    color: string ="";
+    
+    
+    constructor(vehiculos ?: any){
+        this.id = vehiculos == undefined ? null : vehiculos.id;
+        this.marca =  vehiculos == undefined ? '' : vehiculos.marca;
+        this.modelo =  vehiculos == undefined ? '' : vehiculos.modelo;
+        this.patente =  vehiculos == undefined ? '' : vehiculos.patente;
+        this.color =  vehiculos == undefined ? '' : vehiculos.color;
 
-    constructor(productos ?: any){
-        this.id = productos == undefined ? null : productos.id;
-        this.description =  productos == undefined ? '' : productos.description;
-        this.price =  productos == undefined ? '' : productos.price;
-        this.stock =  productos == undefined ? '' :productos.stock;
+        
     }
+    
 }

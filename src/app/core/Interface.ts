@@ -4,7 +4,7 @@ export interface IUser{
     password: string| null;
 }
 export interface IVehiculos{
-    idUsuario: number | null;
+    id: number | null;
     marca: string| null;
     modelo: string| null;
     patente: string| null;

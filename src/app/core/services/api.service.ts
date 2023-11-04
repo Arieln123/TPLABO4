@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
-import { Productos, User } from '../Models';
+import { User, Vehiculo } from '../Models';
 
 @Injectable({
   providedIn: 'root'
@@ -20,27 +20,28 @@ export class ApiService {
     return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`);
   }
 
-  getProductos(): Observable<Productos[]>{
-    return this.http.get<Productos[]>(`${this.baseURL}/Productos`);
+  getVehiculos(): Observable<Vehiculo[]>{
+    return this.http.get<Vehiculo[]>(`${this.baseURL}/vehiculos`);
   }
 
-  addProductos(createProductos: Productos): Observable<boolean> {
-    const url = `${this.baseURL}/Productos`;
-    
-    
-    return this.http.post<boolean>(url, createProductos);
+  addVehiculo(createVehiculo: Vehiculo): Observable<boolean> {
+    const url = `${this.baseURL}/vehiculos`;
+    return this.http.post<boolean>(url, createVehiculo);
   }
 
-  editProductos(id: number, updateProductos: Productos): Observable<boolean> {
-    const url = `${this.baseURL}/Productos/${id}`;
-    return this.http.put<boolean>(url, updateProductos);
+  editVehiculo(id: number, updateVehiculo: Vehiculo): Observable<boolean> {
+    const url = `${this.baseURL}/vehiculos/${id}`;
+    return this.http.put<boolean>(url, updateVehiculo);
   }
 
-  deleteProductos(id: number): Observable<boolean> {
-    return this.http.delete(`${this.baseURL}/Productos/${id}`)
+  deleteVehiculo(id: number): Observable<boolean> {
+    return this.http.delete(`${this.baseURL}/vehiculos/${id}`)
     .pipe(
       map(resp => true), // Si sale bien retorna true. Recibir un response significa que salio bien
       catchError(error => of(false)) // Si hay algun error en la solicitud me regresa falso
     );
   }
+
+
+
 }

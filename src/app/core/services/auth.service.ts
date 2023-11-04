@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
-import { User,Productos } from '../Models';
+import { User,Vehiculo } from '../Models';
 import { lastValueFrom } from 'rxjs';
 @Injectable({
     providedIn: 'root'
