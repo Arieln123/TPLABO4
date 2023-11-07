@@ -15,4 +15,7 @@ export class NavBarComponent {
 
     this.router.navigate(['/login']);
   }
+  public goToContact(){
+    this.router.navigate(['/contact'])
+  }
 }

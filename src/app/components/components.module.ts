@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home/home.component';
 import { AddVehiculoComponent } from './home/add-vehiculo/add-vehiculo.component';
 import { EditVehiculoComponent } from './home/edit-vehiculo/edit-vehiculo.component';
 import { ViewVehiculoComponent } from './home/view-vehiculo/view-vehiculo.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ViewVehiculoComponent } from './home/view-vehiculo/view-vehiculo.compon
         AddVehiculoComponent,
         EditVehiculoComponent,
         ViewVehiculoComponent,
+        ContactFormComponent,
     ],
     exports: [],
     imports: [

@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ErrorComponent} from './shared/error/error.component';
 import { HomeComponent } from './components/home/home/home.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,10 @@ const routes: Routes = [
     path:'home',
     component: HomeComponent
   },
-  
+  {
+  path:"contact",
+  component: ContactFormComponent
+  },
   {
     path: '',
     redirectTo:'landing',
