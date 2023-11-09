@@ -100,6 +100,20 @@
       "idUser": "4",
       "dateIn": 1699556854437,
       "dateOut": 1699556899704
+    },
+    {
+      "id": 6,
+      "idVehiculo": "4",
+      "idUser": "2",
+      "dateIn": 1699572421046,
+      "dateOut": 1699572473631
+    },
+    {
+      "id": 7,
+      "idVehiculo": "1",
+      "idUser": "4",
+      "dateIn": 1699572461702,
+      "dateOut": 1699572640568
     }
   ]
 }
