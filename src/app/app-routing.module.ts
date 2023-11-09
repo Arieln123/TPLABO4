@@ -6,6 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ErrorComponent} from './shared/error/error.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { ParkingComponent } from './components/home/parking/parking.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,9 @@ const routes: Routes = [
   {
     path:'home',
     component: HomeComponent
+  },{
+    path:'parking',
+    component: ParkingComponent
   },
   {
   path:"contact",

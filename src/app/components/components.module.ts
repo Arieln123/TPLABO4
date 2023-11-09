@@ -13,6 +13,8 @@ import { AddVehiculoComponent } from './home/add-vehiculo/add-vehiculo.component
 import { EditVehiculoComponent } from './home/edit-vehiculo/edit-vehiculo.component';
 import { ViewVehiculoComponent } from './home/view-vehiculo/view-vehiculo.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ParkingComponent } from './home/parking/parking.component';
+import { CreateParkingComponent } from './home/create-parking/create-parking.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
         EditVehiculoComponent,
         ViewVehiculoComponent,
         ContactFormComponent,
+        ParkingComponent,
+        CreateParkingComponent,
     ],
     exports: [],
     imports: [

@@ -1,0 +1,30 @@
+<div class="container tablaSection">
+    <h2>Estacionamiento UTN</h2>
+    <table class="my-table table table-hover">
+      <thead>
+        <tr>
+          <th>ID </th>
+          <th>idVehiculo</th>
+          <th>idUser</th>
+          <th>DateIn</th>
+          <th>DateOut</th>
+          <th>Retirar Auto</th>
+
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let parkings of estacionamientos">
+          <td>{{ parkings.id }}</td>
+          <td>{{ parkings.idVehiculo }}</td>
+          <td>{{ parkings.idUser }}</td>
+          <td>{{ parkings.dateIn | date:'medium' }}</td>
+          <td>{{ parkings.dateOut | date:'medium' }}</td>
+          <td *ngIf="parkings.dateOut==null"><button class="btn btn-primary" (click)="setDateOut(parkings)" >Retirar Auto</button></td>
+
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

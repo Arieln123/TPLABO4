@@ -1,68 +1,98 @@
 {
-    "vehiculos": [
-      {
-        "idUser": 1,
-        "marca": "Toyota",
-        "modelo": "Corolla",
-        "patente": "ABC123",
-        "color": "Blanco"
-      },
-      {
-        "idUser": 2,
-        "marca": "Honda",
-        "modelo": "Civic",
-        "patente": "XYZ456",
-        "color": "Gris"
-      },
-      {
-        "idUser": 3,
-        "marca": "Ford",
-        "modelo": "Mustang",
-        "patente": "DEF789",
-        "color": "Rojo"
-      },
-      {
-        "idUser": 4,
-        "marca": "Volkswagen",
-        "modelo": "Golf",
-        "patente": "GHI234",
-        "color": "Azul"
-      },
-      {
-        "idUser": 5,
-        "marca": "Chevrolet",
-        "modelo": "Cruze",
-        "patente": "JKL567",
-        "color": "Negro"
-      }
-    ],
-    "users": [
-      {
-        "id": 1,
-        "email": "test@test.com",
-        "password": "test123",
-        "nombre": "Alejandro",
-        "apellido":"Garnacho",
-        "dni":"1234567",
-        "isAdmin":true
-      },
-      {
-        "id": 2,
-        "email": "maria.gonzalez@example.com",
-        "password": "clave456",
-        "nombre": "Mariana",
-        "apellido":"Tomaso",
-        "dni":"1234567",
-        "isAdmin":false
-      },
-      {
-        "id": 3,
-        "email": "carlos.lopez@example.com",
-        "password": "123456",
-        "nombre": "Pepe",
-        "apellido":"Valdez",
-        "dni":"1234567",
-        "isAdmin":false
-      }
-    ]
-  }
+  "vehiculos": [
+    {
+      "id": 1,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "patente": "ABC123",
+      "color": "Blanco"
+    },
+    {
+      "id": 2,
+      "marca": "Honda",
+      "modelo": "Civic",
+      "patente": "XYZ456",
+      "color": "Gris"
+    },
+    {
+      "id": 3,
+      "marca": "Ford",
+      "modelo": "Mustang",
+      "patente": "DEF789",
+      "color": "Rojo"
+    },
+    {
+      "id": 4,
+      "marca": "Volkswagen",
+      "modelo": "Golf",
+      "patente": "GHI234",
+      "color": "Azul"
+    },
+    {
+      "id": 5,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "patente": "JKL567",
+      "color": "Negro"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "test@test.com",
+      "password": "test123",
+      "nombre": "Alejandro",
+      "apellido": "Garnacho",
+      "dni": "1234567",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "email": "maria.gonzalez@example.com",
+      "password": "clave456",
+      "nombre": "Mariana",
+      "apellido": "Tomaso",
+      "dni": "1234567",
+      "isAdmin": false
+    },
+    {
+      "id": 3,
+      "email": "carlos.lopez@example.com",
+      "password": "123456",
+      "nombre": "Pepe",
+      "apellido": "Valdez",
+      "dni": "1234567",
+      "isAdmin": false
+    }
+  ],
+  "parkings": [
+    {
+      "id": 1,
+      "idVehiculo": 2,
+      "idUser": 3,
+      "dateIn": "2023-01-16",
+      "dateOut": "2023-01-21"
+    },
+    {
+      "id": 2,
+      "idVehiculo": 1,
+      "idUser": 2,
+      "dateIn": "2024-01-16",
+      "dateOut": "2022-01-21"
+    },
+    {
+      "id": 3,
+      "idVehiculo": "4",
+      "idUser": "2",
+      "dateIn": 1699553672551,
+      "dateOut": 1699555067915
+    },
+    {
+      "id": 4,
+      "idVehiculo": "5",
+      "idUser": "2",
+      "dateIn": 1699555149775,
+      "dateOut": null
+    }
+  ]
+}

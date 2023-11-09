@@ -1,0 +1,19 @@
+<div>
+    <h2 class="custom-dialog-title">Estacionar nuevo auto</h2>
+    <form autocomplete="off" class="login-form" (ngSubmit)="createParking()">
+  
+      <div class="form-field">
+        <label for="idUser">Id Usuario:</label>
+        <input type="text" id="idUser" name="idUser" [(ngModel)]="newParking.idUser" required>
+      </div>
+  
+      <div class="form-field">
+        <label for="idVehiculo">Id Vehiculo:</label>
+        <input type="text" id="idVehiculo" name="idVehiculo" [(ngModel)]="newParking.idVehiculo" required>
+      </div>
+  
+  
+      <button type="submit" class="login-button">Estacionar</button>
+    </form>
+  </div>
+  
