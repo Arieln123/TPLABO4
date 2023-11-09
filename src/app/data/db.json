@@ -92,7 +92,14 @@
       "idVehiculo": "5",
       "idUser": "2",
       "dateIn": 1699555149775,
-      "dateOut": null
+      "dateOut": 1699556774366
+    },
+    {
+      "id": 5,
+      "idVehiculo": "2",
+      "idUser": "4",
+      "dateIn": 1699556854437,
+      "dateOut": 1699556899704
     }
   ]
 }
