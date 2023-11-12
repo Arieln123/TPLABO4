@@ -64,7 +64,10 @@ body {
       height: 56px;
       width: 181px;
     }
+    .item{
+      margin-right: 2rem;
 
+    }
     .menu {
       display: flex;
       flex-direction: row;
@@ -72,11 +75,15 @@ body {
       flex-basis: auto;
       justify-content: center;
       align-items: center;
+      margin-right: 1rem;
+      margin-left: 1rem;
+
 
       &-item {
         &:not(:first-child) {
           margin-left: 2rem;
         }
+        margin-left: 2rem;
 
         a {
           font-family: inherit;

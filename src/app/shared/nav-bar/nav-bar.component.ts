@@ -19,6 +19,8 @@ export class NavBarComponent {
   public goToContact(){
     this.router.navigate(['/contact'])
   }
-  
+  public goToHome(){
+    this.router.navigate(['/home'])
+  }
   
 }

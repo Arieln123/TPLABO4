@@ -19,6 +19,7 @@ export class ParkingComponent implements OnInit {
   public estacionamientos: Array<Estacionamiento> = [];
   public users: Array<User> = [];
   public vehiculos: Array<Vehiculo> = [];
+  private popupIsOpen:boolean = false;
 
   constructor(private apiService: ApiService, public dialog: MatDialog) {}
 
@@ -82,18 +83,22 @@ export class ParkingComponent implements OnInit {
     console.log(id);
     const user = this.users.find((u) => u.id == id);
     console.log(user);
-    if (user) {
+    if (user && !this.popupIsOpen) {
+      this.popupIsOpen = true;
       const dialogRef = this.dialog.open(DialogDataExampleDialog, {
         data: user,
         width: '400px', // Ajusta el valor según tus necesidades
         position: {
-          left: '5%', // Centra horizontalmente
+          left: '50%',
+          top:'-40%' // Centra horizontalmente
         },
       });
-
+      
       // Almacena la referencia del diálogo para cerrarlo más tarde si es necesario
       dialogRef.afterClosed().subscribe((result) => {
         console.log('El diálogo se cerró', result);
+        this.popupIsOpen = false;
+
         // Puedes realizar acciones adicionales después de cerrar el diálogo si es necesario
       });
     }
@@ -103,19 +108,25 @@ export class ParkingComponent implements OnInit {
     console.log(id);
     const vehicle = this.vehiculos.find((v) => v.id == id);
     console.log(vehicle);
-    if (vehicle) {
+    if (vehicle && !this.popupIsOpen) {
+      this.popupIsOpen = true;
+
       const dialogRef = this.dialog.open(VehicleDetailsDialogComponent, {
         data: vehicle,
         width: '400px', // Ajusta el valor según tus necesidades
         position: {
-          left: '70%', // Centra horizontalmente
+          left: '40%',
+          top:'-40%' // Centra horizontalmente
         },
-        disableClose: true,
+        disableClose: true
+        
       });
 
       // Almacena la referencia del diálogo para cerrarlo más tarde si es necesario
       dialogRef.afterClosed().subscribe((result) => {
         console.log('El diálogo se cerró', result);
+        this.popupIsOpen = false;
+
         // Puedes realizar acciones adicionales después de cerrar el diálogo si es necesario
       });
     }
@@ -125,13 +136,13 @@ export class ParkingComponent implements OnInit {
 @Component({
   selector: 'app-dialog-data-example-dialog',
   template: `
-    <h2 mat-dialog-title>Datos del Usuario</h2>
-    <div mat-dialog-content>
+    <h2 class="text-center " mat-dialog-title>Datos del Usuario</h2>
+    <div class="text-center " mat-dialog-content>
       <p>Email: {{ data.email }}</p>
       <p>Nombre: {{ data.nombre }}</p>
       <p>Apellido: {{ data.apellido }}</p>
       <p>DNI: {{ data.dni }}</p>
-      <button mat-button (click)="closeDialog()">Cerrar</button>
+      <button class="btn btn-primary " mat-button (click)="closeDialog()">Cerrar</button>
     </div>
   `,
 })
@@ -157,14 +168,14 @@ export interface DialogData {
 @Component({
   selector: 'app-vehicle-details-dialog',
   template: `
-    <h2 mat-dialog-title>Datos del Vehículo</h2>
-    <div mat-dialog-content>
-      <p>Marca: {{ data.marca }}</p>
-      <p>Modelo: {{ data.modelo }}</p>
-      <p>Patente: {{ data.patente }}</p>
-      <p>Color: {{ data.color }}</p>
+    <h2 class="text-center" mat-dialog-title>Datos del Vehículo</h2>
+    <div class="text-center " mat-dialog-content>
+      <p >Marca: {{ data.marca }}</p>
+      <p >Modelo: {{ data.modelo }}</p>
+      <p >Patente: {{ data.patente }}</p>
+      <p >Color: {{ data.color }}</p>
       <!-- Agrega más propiedades según tus necesidades -->
-      <button mat-button (click)="closeDialog()">Cerrar</button>
+      <button class="btn btn-primary" mat-button  (click)="closeDialog()">Cerrar</button>
     </div>
   `,
 })

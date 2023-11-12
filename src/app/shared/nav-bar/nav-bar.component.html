@@ -4,9 +4,36 @@
 
     <div class="wrapper">
       <ul class="menu">
+        <li class="menu-item" *ngIf="authService.checkStatusAutenticacion()">
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            (click)="goToHome()"
+          >
+            Dashboard
+          </button>
+        </li>
+        <li class="menu-item" *ngIf="!authService.checkStatusAutenticacion()">
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            (click)="goToLogin()"
+          >
+            Tarifas
+          </button>
+        </li>
+        <li class="menu-item" *ngIf="!authService.checkStatusAutenticacion()">
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            (click)="goToContact()"
+          >
+            Contacto
+          </button>
+        </li>
         <li
           class="menu-item"
-          *ngIf="!authService.checkStatusAutenticacion() else elseBlock"
+          *ngIf="!authService.checkStatusAutenticacion(); else elseBlock"
         >
           <button
             type="button"
@@ -16,43 +43,17 @@
             Iniciar Sesion
           </button>
         </li>
-
-        <li class="menu-item">
-          <button
-            type="button"
-            class="btn btn-outline-dark"
-            (click)="goToLogin()"
-          >
-            Nuestros servicios
-          </button>
-        </li>
-        <li class="menu-item">
-          <button
-            type="button"
-            class="btn btn-outline-dark"
-            (click)="goToLogin()"
-          >
-            Tarifas
-          </button>
-        </li>
-        <li class="menu-item">
-          <button
-            type="button"
-            class="btn btn-outline-dark"
-            (click)="goToContact()"
-          >
-            Contacto
-          </button>
-        </li>
       </ul>
     </div>
   </nav>
 </header>
 
-<ng-template  #elseBlock>
-  
-    <button type="button" class="btn btn-outline-dark" (click)="authService.logout()">
-      Cerrar Sesion
-    </button>
-  
+<ng-template #elseBlock>
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="authService.logout()"
+  >
+    Cerrar Sesion
+  </button>
 </ng-template>
