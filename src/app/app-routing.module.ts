@@ -7,6 +7,7 @@ import { ErrorComponent} from './shared/error/error.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { ParkingComponent } from './components/home/parking/parking.component';
+import { authGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -19,10 +20,13 @@ const routes: Routes = [
   },
   {
     path:'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [authGuard]
+
   },{
     path:'parking',
-    component: ParkingComponent
+    component: ParkingComponent,
+    canActivate: [authGuard]
   },
   {
   path:"contact",

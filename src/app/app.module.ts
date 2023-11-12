@@ -8,6 +8,7 @@ import { ComponentsModule } from './components/components.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { AuthService } from './core/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,9 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     HttpClientModule,
     MatDialogModule
+    
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

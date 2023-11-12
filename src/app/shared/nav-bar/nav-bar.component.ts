@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
-  constructor(private router: Router) {
+  constructor(private router: Router, public authService: AuthService) {
 
   }
 
@@ -18,4 +19,6 @@ export class NavBarComponent {
   public goToContact(){
     this.router.navigate(['/contact'])
   }
+  
+  
 }

@@ -19,7 +19,8 @@ export class LoginComponent{
     const check = this.authService.checkAuth(this.user.email, this.user.password);
 
     if(await check){
-      console.log("funciona el login")
+      console.log("funciona el login");
+
       this.router.navigate(['/home']);
     }
     else{

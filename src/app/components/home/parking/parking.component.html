@@ -21,9 +21,15 @@
         <td *ngIf="parkings.dateOut != null; else elseBlock">
           {{ parkings.dateOut | date : "medium" }}
         </td>
-        <td>        <button mat-button (click)="openDialog(parkings.idUser)">{{ parkings.idUser }}</button>
+        <td>
+          <button mat-button (click)="openDialog(parkings.idUser)">
+            {{ parkings.idUser }}
+          </button>
         </td>
-        <td>        <button mat-button (click)="openVehicleDialog(parkings.idVehiculo)">{{ parkings.idVehiculo }}</button>
+        <td>
+          <button mat-button (click)="openVehicleDialog(parkings.idVehiculo)">
+            {{ parkings.idVehiculo }}
+          </button>
         </td>
         <ng-template class="btn btn-primary" #elseBlock
           ><button class="btn btn-primary" (click)="setDateOut(parkings)">
