@@ -3,34 +3,35 @@
   <table class="my-table table table-hover">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>idVehiculo</th>
-        <th>idUser</th>
+        <th>Registro</th>
+        <th>Vehiculo</th>
+        <th>Usuario</th>
         <th>DateIn</th>
         <th>DateOut</th>
-        <th>Info User</th>
-        <th>Info Vehicle</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let parkings of estacionamientos">
         <td>{{ parkings.id }}</td>
-        <td>{{ parkings.idVehiculo }}</td>
-        <td>{{ parkings.idUser }}</td>
+        <td>
+          <button class="btn btn-primary" mat-button (click)="openVehicleDialog(parkings.idVehiculo)">
+            {{ vehiculos[parkings.idVehiculo! - 1].patente }}
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-primary" mat-button (click)="openDialog(parkings.idUser)">
+            {{
+              users[parkings.idUser! - 1].nombre +
+                " " +
+                users[parkings.idUser! - 1].apellido
+            }}
+          </button>
+        </td>
         <td>{{ parkings.dateIn | date : "medium" }}</td>
         <td *ngIf="parkings.dateOut != null; else elseBlock">
           {{ parkings.dateOut | date : "medium" }}
         </td>
-        <td>
-          <button mat-button (click)="openDialog(parkings.idUser)">
-            {{ parkings.idUser }}
-          </button>
-        </td>
-        <td>
-          <button mat-button (click)="openVehicleDialog(parkings.idVehiculo)">
-            {{ parkings.idVehiculo }}
-          </button>
-        </td>
+
         <ng-template class="btn btn-primary" #elseBlock
           ><button class="btn btn-primary" (click)="setDateOut(parkings)">
             Retirar Auto
