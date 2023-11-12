@@ -1,7 +1,16 @@
 .tablaSection{
     border: 3px solid  ;
-    margin: 3rem;
-    position: relative;
+    margin-top: 2rem;
     width: auto;
-    
+    padding:2rem;
+}
+td{
+text-align: center;}
+
+th{
+    text-align: center;}
+
+button{
+    display: block;
+    margin: 0 auto;
 }
