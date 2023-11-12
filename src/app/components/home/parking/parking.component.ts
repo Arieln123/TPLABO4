@@ -2,6 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Estacionamiento, User, Vehiculo } from 'src/app/core/Models';
 import { ApiService } from 'src/app/core/services/api.service';
 import { lastValueFrom } from 'rxjs';
+import { CommonModule } from '@angular/common'
+
 import {
   MatDialog,
   MatDialogRef,
@@ -74,6 +76,8 @@ export class ParkingComponent implements OnInit {
     });
   }
 
+  
+
   openDialog(id: any) {
     console.log(id);
     const user = this.users.find((u) => u.id == id);
@@ -106,6 +110,7 @@ export class ParkingComponent implements OnInit {
         position: {
           left: '70%', // Centra horizontalmente
         },
+        disableClose: true,
       });
 
       // Almacena la referencia del diálogo para cerrarlo más tarde si es necesario
@@ -173,3 +178,4 @@ export class VehicleDetailsDialogComponent {
     this.dialogRef.close();
   }
 }
+

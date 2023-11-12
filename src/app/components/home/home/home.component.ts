@@ -3,6 +3,7 @@ import { ApiService } from '../../../core/services/api.service';
 import { Estacionamiento, Vehiculo } from 'src/app/core/Models';
 import { lastValueFrom } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +11,10 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private apiService: ApiService, private dialog: MatDialog) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   public vehiculos: Array<Vehiculo> = [];
-
+  
   ngOnInit(): void {
     this.getVehiculos();
   }
@@ -37,33 +38,15 @@ export class HomeComponent implements OnInit {
 
     this.apiService.addParking(parking).subscribe({
       next: () => {
-        alert("Usuario creado con exito");
-
+        
+        this.router.navigate(['/home']);
+        alert("Parking creado con exito");
+        
+        
       },
       error: () => alert("No se ha podido crear el usuario")
     })
   }
 
-  /*
-  public editPerson(person: Person) {
-
-    const dialogRef = this.dialog.open(EditPersonComponent, { data: person, height: '400px', width: '350px' });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('El cuadro de diálogo se cerró con resultado:', result);
-    });
-  }
-
-
-  public deletePerson(id: number){
-
-      this.apiService.deletePerson(id).subscribe({
-        next: ()=>{
-          this.getPersons();
-          alert("Usuario eliminado con exito");
-        },
-        error: ()=> alert("No se ha podido eliminar el usuario")
-      })
-  }
-*/
+  
 }

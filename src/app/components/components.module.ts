@@ -15,6 +15,7 @@ import { ViewVehiculoComponent } from './home/view-vehiculo/view-vehiculo.compon
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ParkingComponent } from './home/parking/parking.component';
 import { CreateParkingComponent } from './home/create-parking/create-parking.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CreateParkingComponent } from './home/create-parking/create-parking.com
         ComponentsRoutingModule,
         SharedModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
+        BrowserModule,
 
     ]
 })

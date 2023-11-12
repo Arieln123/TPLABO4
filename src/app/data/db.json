@@ -114,6 +114,34 @@
       "idUser": "1",
       "dateIn": 1699572461702,
       "dateOut": 1699572640568
+    },
+    {
+      "id": 8,
+      "idVehiculo": "4",
+      "idUser": "2",
+      "dateIn": 1699796474745,
+      "dateOut": null
+    },
+    {
+      "id": 9,
+      "idVehiculo": "3",
+      "idUser": "2",
+      "dateIn": 1699798409636,
+      "dateOut": null
+    },
+    {
+      "id": 10,
+      "idVehiculo": "2",
+      "idUser": "1",
+      "dateIn": 1699798641730,
+      "dateOut": null
+    },
+    {
+      "id": 11,
+      "idVehiculo": "3",
+      "idUser": "2",
+      "dateIn": 1699798673361,
+      "dateOut": null
     }
   ]
 }

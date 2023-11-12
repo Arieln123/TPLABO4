@@ -1,19 +1,29 @@
-<div>
-    <h2 class="custom-dialog-title">Estacionar nuevo auto</h2>
-    <form autocomplete="off" class="login-form" (ngSubmit)="createParking()">
-  
-      <div class="form-field">
-        <label for="idUser">Id Usuario:</label>
-        <input type="text" id="idUser" name="idUser" [(ngModel)]="newParking.idUser" required>
-      </div>
-  
-      <div class="form-field">
-        <label for="idVehiculo">Id Vehiculo:</label>
-        <input type="text" id="idVehiculo" name="idVehiculo" [(ngModel)]="newParking.idVehiculo" required>
-      </div>
-  
-  
-      <button type="submit" class="login-button">Estacionar</button>
-    </form>
-  </div>
-  
+<div class="container">
+  <h2 class="custom-dialog-title">Estacionar nuevo auto</h2>
+  <form autocomplete="off" class="login-form" (ngSubmit)="createParking()">
+    
+    <label class="col-sm-2"> Usuario: </label>
+    <div class="col-sm-10">
+      <select name="User" (change)="ChangeUser($event)" class="form-control">
+        <option>-Seleccionar Usuario-</option>
+        <option [value]="user.id" *ngFor="let user of users">
+          {{ user.nombre + " " + user.apellido }}
+        </option>
+      </select>
+
+      <label class="col-sm-2"> Vehiculo: </label>
+      <select
+        name="Vehiculo"
+        (change)="ChangeVehiculo($event)"
+        class="form-control"
+      >
+        <option>-Seleccionar Vehiculo-</option>
+        <option [value]="vehiculo.id" *ngFor="let vehiculo of vehiculos">
+          {{ vehiculo.patente }}
+        </option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Estacionar</button>
+  </form>
+</div>
