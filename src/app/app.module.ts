@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AuthService } from './core/services/auth.service';
 import { CommonModule } from '@angular/common';
-import { PopupComponent } from './components/popup/popup.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,10 @@ import { PopupComponent } from './components/popup/popup.component';
     MatDialogModule,
     BrowserModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatAutocompleteModule
     
+
     
   ],
   providers: [AuthService],

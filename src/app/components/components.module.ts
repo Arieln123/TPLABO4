@@ -18,6 +18,13 @@ import { CreateParkingComponent } from './home/create-parking/create-parking.com
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from '../material-module';
 import { PopupComponent } from './popup/popup.component';
+<<<<<<< Updated upstream
+=======
+import { AddVehicle } from './home/add-vehiculo/add-vehiculo.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { AsyncPipe } from '@angular/common';
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -33,7 +40,14 @@ import { PopupComponent } from './popup/popup.component';
         ParkingComponent,
         CreateParkingComponent,
         PopupComponent,
+<<<<<<< Updated upstream
         ContactFormComponent
+=======
+        ContactFormComponent,
+        AddVehicle,
+        AutocompleteComponent,
+        
+>>>>>>> Stashed changes
     ],
     exports: [],
     imports: [
@@ -45,6 +59,10 @@ import { PopupComponent } from './popup/popup.component';
         BrowserModule,
         MaterialModule,
         ReactiveFormsModule,
+        MatAutocompleteModule,
+        AsyncPipe
+    
+
     ]
 })
 export class ComponentsModule { }

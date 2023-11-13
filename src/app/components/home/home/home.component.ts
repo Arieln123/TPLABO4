@@ -39,11 +39,6 @@ export class HomeComponent implements OnInit {
 
 
 
-
-
-
-
-
   constructor(private apiService: ApiService, private router: Router,private service: MasterService, private dialog: MatDialog) {}
   public users: Array<User> = [];
   public vehiculos: Array<Vehiculo> = [];

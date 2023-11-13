@@ -1,0 +1,12 @@
+<h3>Usuarios</h3>
+
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input matInput [matAutocomplete]="auto" [formControl]="formcontrol" placeholder="Buscar usuarios" />
+        <mat-autocomplete autoActiveFirstOption #auto>
+            <mat-option *ngFor="let user of filteroptionslist | async" [value]="user">
+                {{ user.nombre }} | {{ user.dni }}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>
