@@ -1,5 +1,5 @@
 <form [formGroup]="myform" (ngSubmit)="Saveuser()">
-    <h1 mat-dialog-title>{{inputdata.title}}</h1>
+    <h1 mat-dialog-title>Agregar Cliente</h1>
     <div mat-dialog-content>
        <mat-form-field>
         <mat-label>Nombre</mat-label>
@@ -15,11 +15,11 @@
        </mat-form-field>
        <mat-form-field>
         <mat-label>Mail</mat-label>
-        <input formControlName="mail" matInput>
+        <input formControlName="email" matInput>
        </mat-form-field>
        <mat-form-field>
         <mat-label>Password</mat-label>
-        <input matInput formControlName="Password">
+        <input matInput formControlName="password">
        </mat-form-field>
     </div>
     <div mat-dialog-actions>

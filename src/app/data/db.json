@@ -81,6 +81,15 @@
       "password": "",
       "isAdmin": true,
       "id": 5
+    },
+    {
+      "nombre": "prueba 13/11",
+      "apellido": "asd",
+      "dni": "1234",
+      "email": "mail@mail.com",
+      "password": "12345",
+      "isAdmin": false,
+      "id": 6
     }
   ],
   "parkings": [
@@ -145,7 +154,7 @@
       "idVehiculo": "3",
       "idUser": "2",
       "dateIn": 1699798409636,
-      "dateOut": null
+      "dateOut": 1699873620742
     },
     {
       "id": 10,

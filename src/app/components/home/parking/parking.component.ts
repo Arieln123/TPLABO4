@@ -90,7 +90,7 @@ export class ParkingComponent implements OnInit {
         width: '400px', // Ajusta el valor según tus necesidades
         position: {
           left: '50%',
-          top:'-40%' // Centra horizontalmente
+          // Centra horizontalmente
         },
       });
       
@@ -115,8 +115,8 @@ export class ParkingComponent implements OnInit {
         data: vehicle,
         width: '400px', // Ajusta el valor según tus necesidades
         position: {
-          left: '40%',
-          top:'-40%' // Centra horizontalmente
+          left: '50%',
+           // Centra horizontalmente
         },
         disableClose: true
         

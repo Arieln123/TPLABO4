@@ -47,7 +47,7 @@ export class PopupComponent implements OnInit {
     dni: this.buildr.control(''),
     email: this.buildr.control(''),
     password: this.buildr.control(''),
-    isAdmin: this.buildr.control(true)
+    isAdmin: this.buildr.control(false)
   });
 
   Saveuser() {
