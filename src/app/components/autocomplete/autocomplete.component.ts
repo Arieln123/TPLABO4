@@ -7,6 +7,8 @@ import { AsyncPipe } from '@angular/common';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { User } from 'src/app/core/Models';
 import { ApiService } from 'src/app/core/services/api.service';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-autocomplete',
   templateUrl: './autocomplete.component.html',
