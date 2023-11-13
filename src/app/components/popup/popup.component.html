@@ -1,0 +1,30 @@
+<form [formGroup]="myform" (ngSubmit)="Saveuser()">
+    <h1 mat-dialog-title>Agregar Cliente</h1>
+    <div mat-dialog-content>
+       <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input formControlName="nombre" matInput>
+       </mat-form-field>
+       <mat-form-field>
+        <mat-label>Apellido</mat-label>
+        <input formControlName="apellido" matInput>
+       </mat-form-field>
+       <mat-form-field>
+        <mat-label>Dni</mat-label>
+        <input formControlName="dni" matInput>
+       </mat-form-field>
+       <mat-form-field>
+        <mat-label>Mail</mat-label>
+        <input formControlName="email" matInput>
+       </mat-form-field>
+       <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password">
+       </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button type="submit" color="primary">Save</button>
+      <a (click)="closepopup()" mat-raised-button color="warn">Close</a>
+      <!-- <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button> -->
+    </div>
+    </form>

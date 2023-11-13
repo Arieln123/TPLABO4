@@ -6,7 +6,7 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from "../shared/shared.module";
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home/home.component';
 import { AddVehiculoComponent } from './home/add-vehiculo/add-vehiculo.component';
@@ -16,6 +16,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ParkingComponent } from './home/parking/parking.component';
 import { CreateParkingComponent } from './home/create-parking/create-parking.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { MaterialModule } from '../material-module';
+import { PopupComponent } from './popup/popup.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { BrowserModule } from '@angular/platform-browser';
         ContactFormComponent,
         ParkingComponent,
         CreateParkingComponent,
+        PopupComponent,
+        ContactFormComponent
     ],
     exports: [],
     imports: [
@@ -39,7 +43,8 @@ import { BrowserModule } from '@angular/platform-browser';
         FormsModule,
         HttpClientModule,
         BrowserModule,
-
+        MaterialModule,
+        ReactiveFormsModule,
     ]
 })
 export class ComponentsModule { }

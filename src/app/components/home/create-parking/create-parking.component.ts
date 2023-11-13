@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Estacionamiento, User, Vehiculo } from 'src/app/core/Models';
 import { ApiService } from 'src/app/core/services/api.service';
-import { ParkingComponent } from '../parking/parking.component';
+import { ParkingComponent } from 'src/app/components/home/parking/parking.component';
 
 @Component({
   selector: 'app-create-parking',
