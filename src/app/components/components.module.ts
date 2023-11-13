@@ -33,7 +33,7 @@ import { PopupComponent } from './popup/popup.component';
         ParkingComponent,
         CreateParkingComponent,
         PopupComponent,
-        
+        ContactFormComponent
     ],
     exports: [],
     imports: [
@@ -44,7 +44,7 @@ import { PopupComponent } from './popup/popup.component';
         HttpClientModule,
         BrowserModule,
         MaterialModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
     ]
 })
 export class ComponentsModule { }
