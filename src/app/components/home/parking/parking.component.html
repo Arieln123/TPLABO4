@@ -6,14 +6,14 @@
         <th>Registro</th>
         <th>Vehiculo</th>
         <th>Usuario</th>
-        <th>DateIn</th>
-        <th>DateOut</th>
+        <th>Entrada</th>
+        <th>Salida</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let parkings of estacionamientos">
+      <tr class="text-center" *ngFor="let parkings of estacionamientos">
         <td>{{ parkings.id }}</td>
-        <td>
+        <td class="text-center" >
           <button class="btn btn-primary " mat-button  (click)="openVehicleDialog(parkings.idVehiculo)">
             {{ vehiculos[parkings.idVehiculo! - 1].patente }}
           </button>

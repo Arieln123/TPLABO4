@@ -1,1 +1,27 @@
-<p>add-vehiculo works!</p>
+<form [formGroup]="myform" (ngSubmit)="SaveVehicle()">
+    <h1 mat-dialog-title>Agregar Vehiculo</h1>
+    <div mat-dialog-content>
+       <mat-form-field>
+        <mat-label>Marca</mat-label>
+        <input formControlName="marca" matInput>
+       </mat-form-field>
+       <mat-form-field>
+        <mat-label>Modelo</mat-label>
+        <input formControlName="modelo" matInput>
+       </mat-form-field>
+       <mat-form-field>
+        <mat-label>Patente</mat-label>
+        <input formControlName="patente" matInput>
+       </mat-form-field>
+       <mat-form-field>
+        <mat-label>Color</mat-label>
+        <input formControlName="color" matInput>
+       </mat-form-field>
+      
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button type="submit" color="primary">Save</button>
+      <a (click)="closepopup()" mat-raised-button color="warn">Close</a>
+      <!-- <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button> -->
+    </div>
+    </form>

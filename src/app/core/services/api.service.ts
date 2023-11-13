@@ -44,8 +44,8 @@ export class ApiService {
     return this.http.post<boolean>(url, createParking);
   }
 
-  editVehiculo(idUser: number, updateVehiculo: Vehiculo): Observable<boolean> {
-    const url = `${this.baseURL}/vehiculos/${idUser}`;
+  editVehiculo(idVehiculo: number, updateVehiculo: Vehiculo): Observable<boolean> {
+    const url = `${this.baseURL}/vehiculos/${idVehiculo}`;
     return this.http.put<boolean>(url, updateVehiculo);
   }
 

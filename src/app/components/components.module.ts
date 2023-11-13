@@ -9,7 +9,6 @@ import { SharedModule } from "../shared/shared.module";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home/home.component';
-import { AddVehiculoComponent } from './home/add-vehiculo/add-vehiculo.component';
 import { EditVehiculoComponent } from './home/edit-vehiculo/edit-vehiculo.component';
 import { ViewVehiculoComponent } from './home/view-vehiculo/view-vehiculo.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -18,6 +17,7 @@ import { CreateParkingComponent } from './home/create-parking/create-parking.com
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from '../material-module';
 import { PopupComponent } from './popup/popup.component';
+import { AddVehicle } from './home/add-vehiculo/add-vehiculo.component';
 
 
 @NgModule({
@@ -26,14 +26,14 @@ import { PopupComponent } from './popup/popup.component';
         LoginComponent,
         RegisterComponent,
         HomeComponent,
-        AddVehiculoComponent,
         EditVehiculoComponent,
         ViewVehiculoComponent,
         ContactFormComponent,
         ParkingComponent,
         CreateParkingComponent,
         PopupComponent,
-        ContactFormComponent
+        ContactFormComponent,
+        AddVehicle,
     ],
     exports: [],
     imports: [

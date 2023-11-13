@@ -1,4 +1,10 @@
 <app-nav-bar></app-nav-bar>
-<button style="margin-left: 60%;" (click)="addcustomer()" mat-raised-button color="primary">Add User (+)</button>
+<div class="container text-center " >
+    <button  class="botones" (click)="addcustomer()" mat-raised-button color="primary">Agregar Cliente (+)</button>
+    
+    <button  class="botones" (click)="addVehicle()" mat-raised-button color="primary">Agregar Vehiculo (+)</button>
+
+</div>
+
 <app-create-parking (parkingToCreate)="createParking($event)"></app-create-parking>
     <app-parking></app-parking>

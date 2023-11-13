@@ -4,7 +4,7 @@ import { Estacionamiento, Vehiculo } from 'src/app/core/Models';
 import { lastValueFrom } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-
+import {AddVehicle } from 'src/app/components/home/add-vehiculo/add-vehiculo.component'
 
 
 import { MatPaginator } from '@angular/material/paginator';
@@ -109,4 +109,49 @@ export class HomeComponent implements OnInit {
     });
   }
   
+
+
+
+
+
+
+
+//add vehicle
+
+
+
+addVehicle(){
+  this.OpenpopupV(0, 'Add Vehicle',AddVehicle);
+}
+
+OpenpopupV(code: any, title: any,component:any) {
+  var _popup = this.dialog.open(component, {
+    width: '40%',
+    enterAnimationDuration: '1000ms',
+    exitAnimationDuration: '1000ms',
+    data: {
+      title: title,
+      code: code
+    }
+  });
+  _popup.afterClosed().subscribe(item => {
+    // console.log(item)
+    this.loadVehicle();
+  })
+}
+
+loadVehicle() {
+  this.service.GetVehicle().subscribe(res => {
+    this.vehiculos = res;
+    this.dataSource = new MatTableDataSource<Vehiculo>(this.vehiculos);
+    this.dataSource.paginator = this.paginatior;
+    this.dataSource.sort = this.sort;
+  });
+}
+
+
+
+
+
+
 }
