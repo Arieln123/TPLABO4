@@ -34,6 +34,13 @@
       "modelo": "Cruze",
       "patente": "JKL567",
       "color": "Negro"
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Lindo",
+      "patente": "asd123",
+      "color": "rojo",
+      "id": 6
     }
   ],
   "users": [

@@ -3,7 +3,7 @@ import { colorentity } from 'src/app/Entity/colorentity';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
 
-import { User } from '../Models';
+import { User,Vehiculo } from '../Models';
 @Injectable({
   providedIn: 'root'
 })
@@ -34,6 +34,25 @@ export class MasterService {
     return this.http.get("http://localhost:3000/user/"+code);
   }
 
- 
+
+GetVehicle():Observable<Vehiculo[]>{
+    return this.http.get<Vehiculo[]>("http://localhost:3000/vehiculos");
+  }
+
+  SaveVehicle(data:any){
+    console.log(data)
+    return this.http.post("http://localhost:3000/vehiculos",data);
+  }
+
+  GetVehiclebycode(code:any){
+    return this.http.get("http://localhost:3000/vehiculos/"+code);
+  }
+
+
+
+
+
+
+
 
 }
