@@ -5,11 +5,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { ComponentsModule } from './components/components.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AuthService } from './core/services/auth.service';
 import { CommonModule } from '@angular/common';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     MatDialogModule,
     BrowserModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
+    
     
   ],
   providers: [AuthService],

@@ -63,6 +63,24 @@
       "apellido": "Valdez",
       "dni": "1234567",
       "isAdmin": false
+    },
+    {
+      "nombre": "Ariel",
+      "apellido": "Nicosia",
+      "dni": "35620677",
+      "email": "",
+      "password": "",
+      "isAdmin": true,
+      "id": 4
+    },
+    {
+      "nombre": "prueba",
+      "apellido": "pruebita",
+      "dni": "12344123",
+      "email": "",
+      "password": "",
+      "isAdmin": true,
+      "id": 5
     }
   ],
   "parkings": [
